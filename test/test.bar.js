@@ -22,9 +22,12 @@ describe('cubed', function() {
 
 });
 
+
+
 describe('exponentOf', function() {
   it('should return a number raised to given exponent', function() {
-    expect(bar.exponentOf(2, 6)).to.equal('');
+    var square = bar.exponentOf(2);
+    expect(square(2)).to.equal(4);
 
   });
 });
@@ -45,7 +48,7 @@ describe('cipher', function() {
 
 describe('decipher', function() {
   it('should decipher a string', function() {
-    expect(bar.decipher('horse')).to.equal('\u0004\u000b\u000e\u000f\u0001');
+    expect(bar.decipher('ÌÓÖ×É')).to.equal('horse');
   });
 });
 
